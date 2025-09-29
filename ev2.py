@@ -36,22 +36,22 @@ def main():
 
             while True:
                 try:
-                   clientes_ordenados = sorted(Clientes.items(), key=lambda x: (x[1][1], x[1][0]))
-                   print("\n--- Clientes Registrados ---")
-                   print(f"{'Clave':<10}{'Apellido':<20}{'Nombre':<15}")
-                   for clave, (nombre, apellido) in clientes_ordenados:
-                       print(f"{clave:<10}{apellido:<20}{nombre:<15}")
+                    clientes_ordenados = sorted(Clientes.items(), key=lambda x: (x[1][1], x[1][0]))
+                    print("\n--- Clientes Registrados ---")
+                    print(f"{'Clave':<10}{'Apellido':<20}{'Nombre':<15}")
+                    for clave, (nombre, apellido) in clientes_ordenados:
+                        print(f"{clave:<10}{apellido:<20}{nombre:<15}")
 
-                   clave_cliente_input = input("Ingrese la clave del cliente o escriba 'CANCELAR' para salir: ").strip().upper()
-                   if clave_cliente_input == "CANCELAR":
-                       print("Operación cancelada. Regresando al menú principal.")
-                       break
-                   if clave_cliente_input not in Clientes:
-                       print("La clave ingresada no existe. Intente de nuevo o escriba 'CANCELAR' para salir.")
-                       continue
-                   break
+                    clave_cliente_input = input("Ingrese la clave del cliente o escriba 'CANCELAR' para salir: ").strip().upper()
+                    if clave_cliente_input == "CANCELAR":
+                        print("Operación cancelada. Regresando al menú principal.")
+                        break
+                    if clave_cliente_input not in Clientes:
+                        print("La clave ingresada no existe. Intente de nuevo o escriba 'CANCELAR' para salir.")
+                        continue
+                    break
                 except Exception as e:
-                   print(f"Error: {e}")
+                    print(f"Error: {e}")
             if clave_cliente_input == "CANCELAR":
                 continue
 
@@ -83,17 +83,17 @@ def main():
 
             while True:
                 try: 
-                   clave_sala_input = input("Ingrese la clave de la sala o 'CANCELAR' para salir: ").strip().upper()
-                   if clave_sala_input == "CANCELAR":
-                       print("Operación cancelada. Regresando al menú principal.")
-                       break
-                   if clave_sala_input not in Salas:
-                       print("La clave ingresada no existe. Intente de nuevo.")
-                       continue
-                   break
+                    clave_sala_input = input("Ingrese la clave de la sala o 'CANCELAR' para salir: ").strip().upper()
+                    if clave_sala_input == "CANCELAR":
+                        print("Operación cancelada. Regresando al menú principal.")
+                        break
+                    if clave_sala_input not in Salas:
+                        print("La clave ingresada no existe. Intente de nuevo.")
+                        continue
+                    break
                 except Exception as e:
-                   print(f"Error: {e}")
-                   
+                    print(f"Error: {e}")
+                
             if clave_sala_input == "CANCELAR":
                 continue
             try:
